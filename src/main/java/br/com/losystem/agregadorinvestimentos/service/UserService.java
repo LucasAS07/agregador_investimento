@@ -43,8 +43,8 @@ public class UserService {
 
     public void deleteByid(String id) {
         var userId = UUID.fromString(id);
-        var userExists = userRepository.findById(userId);
-        if (userExists.isPresent()) {
+        var userExists = userRepository.existsById(userId);
+        if (userExists) {
             userRepository.deleteById(userId);
         }
     }

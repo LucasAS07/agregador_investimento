@@ -4,7 +4,6 @@ import br.com.losystem.agregadorinvestimentos.dto.CreateUserDTO;
 import br.com.losystem.agregadorinvestimentos.dto.UpdateUserDTO;
 import br.com.losystem.agregadorinvestimentos.entity.User;
 import br.com.losystem.agregadorinvestimentos.service.UserService;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
