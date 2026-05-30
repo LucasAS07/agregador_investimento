@@ -1,6 +1,6 @@
 package br.com.losystem.agregadorinvestimentos.service;
 
-import br.com.losystem.agregadorinvestimentos.dto.CreateUserDTO;
+import br.com.losystem.agregadorinvestimentos.dto.request.CreateUserDTO;
 import br.com.losystem.agregadorinvestimentos.dto.UpdateUserDTO;
 import br.com.losystem.agregadorinvestimentos.entity.User;
 import br.com.losystem.agregadorinvestimentos.repository.UserRepository;

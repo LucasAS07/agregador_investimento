@@ -1,6 +1,8 @@
 package br.com.losystem.agregadorinvestimentos.controller;
 
-import br.com.losystem.agregadorinvestimentos.dto.CreateUserDTO;
+import br.com.losystem.agregadorinvestimentos.dto.response.AccountResponseDTO;
+import br.com.losystem.agregadorinvestimentos.dto.request.CreateAccountDTO;
+import br.com.losystem.agregadorinvestimentos.dto.request.CreateUserDTO;
 import br.com.losystem.agregadorinvestimentos.dto.UpdateUserDTO;
 import br.com.losystem.agregadorinvestimentos.entity.User;
 import br.com.losystem.agregadorinvestimentos.service.UserService;
@@ -51,6 +53,18 @@ public class UserController {
     public ResponseEntity<Void> updateUser(@PathVariable String userId, @RequestBody UpdateUserDTO dto) {
         userService.updateUser(userId,dto);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{userId}/accounts")
+    public ResponseEntity<Void> createAccount(@PathVariable String userId, @RequestBody CreateAccountDTO accountDTO) {
+        userService.createAccount(userId,accountDTO);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/{userId}/accounts")
+    public ResponseEntity<List<AccountResponseDTO>> createAccount(@PathVariable String userId) {
+        var accounts = userService.listAccount(userId);
+        return ResponseEntity.ok(accounts);
     }
 
 }

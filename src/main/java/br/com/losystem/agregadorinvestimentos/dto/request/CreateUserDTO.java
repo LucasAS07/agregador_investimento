@@ -1,4 +1,4 @@
-package br.com.losystem.agregadorinvestimentos.dto;
+package br.com.losystem.agregadorinvestimentos.dto.request;
 
 public record CreateUserDTO(
         String username,
